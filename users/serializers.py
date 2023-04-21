@@ -76,7 +76,6 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 
 class CustomTokenRefreshSerializer(TokenRefreshSerializer):
-
     def validate(self, attrs):
         data = super().validate(attrs)
         access_token_instance = AccessToken(data['access'])
